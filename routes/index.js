@@ -2,8 +2,10 @@ let routes = {}
 
 routes.herb = require('./herb')
 routes.image = require('./image')
-routes.herb = require('./event')
-routes.image = require('./drug')
-routes.herb = require('./ingredient')
+routes.event = require('./event')
+routes.drug = require('./drug')
+routes.ingredient = require('./ingredient')
+routes.benefit = require('./benefit')
+
 
 module.exports = routes

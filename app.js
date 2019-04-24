@@ -16,6 +16,7 @@ app.use(routes.image)
 app.use(routes.event)
 app.use(routes.drug)
 app.use(routes.ingredient)
+app.use(routes.benefit)
 
 
 module.exports = app
