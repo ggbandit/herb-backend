@@ -13,5 +13,9 @@ app.use('/uploads', express.static('uploads'))
 const routes = require('./routes')
 app.use(routes.herb)
 app.use(routes.image)
+app.use(routes.event)
+app.use(routes.drug)
+app.use(routes.ingredient)
+
 
 module.exports = app
