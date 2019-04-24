@@ -13,9 +13,6 @@ module.exports = (sequelize, DataTypes) => {
         description: {
             type: DataTypes.TEXT
         },
-        benefit: {
-            type: DataTypes.TEXT
-        },
         createdAt: {
             type: DataTypes.DATE,
             defaultValue: DataTypes.NOW

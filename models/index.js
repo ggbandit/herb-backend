@@ -30,6 +30,7 @@ model.image = require('./image.js')(sequelize, Sequelize)
 model.event = require('./event.js')(sequelize, Sequelize)
 model.drug = require('./drug.js')(sequelize, Sequelize)
 model.ingredient = require('./ingredient.js')(sequelize, Sequelize)
+model.benefit = require('./benefit.js')(sequelize, Sequelize)
 
 
 
@@ -44,5 +45,8 @@ model.image.belongsTo(model.drug,{foreignKey: 'drugID', targetKey: 'drugID'})
 
 model.drug.hasMany(model.ingredient,{foreignKey: 'drugID', sourceKey: 'drugID'})
 model.ingredient.belongsTo(model.drug,{foreignKey: 'drugID', targetKey: 'drugID'})
+
+model.herb.hasMany(model.benefit,{foreignKey: 'herbID', sourceKey: 'herbID'})
+model.benefit.belongsTo(model.herb,{foreignKey: 'herbID', targetKey: 'herbID'})
 
 module.exports = model;
