@@ -22,10 +22,10 @@ module.exports = {
         }
     },
     async createMultiple(req, res) {
+        console.log(req.files)
         let drugImage = {}
         if(req.files) {
             for(i in req.files) {
-                console.log(req.files[i])
                 drugImage = {
                     name:   req.files[i].originalname,
                     path:   req.files[i].path,

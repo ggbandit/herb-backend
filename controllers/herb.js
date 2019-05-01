@@ -38,7 +38,7 @@ module.exports = {
         }
     },
     async destroy(req, res) {
-        const result = model.herb.destroy({ where: { id: req.params.id } });
+        const result = model.herb.destroy({ where: { herbID: req.params.id } });
         return await res.status(result ? 200 : 400).send({
             status: result ? 200 : 400, result: result ? 'Successful' : 'Failure'
         });

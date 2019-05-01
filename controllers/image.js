@@ -31,7 +31,7 @@ module.exports = {
         }
     },
     async destroy(req, res) {
-        const result = model.image.destroy({ where: { id: req.params.id } });
+        const result = model.image.destroy({ where: { imageID: req.params.id } });
         return await res.status(result ? 200 : 400).send({
             status: result ? 200 : 400, result: result ? 'Successful' : 'Failure'
         });
